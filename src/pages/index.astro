@@ -1,87 +1,154 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import IconGit from "../icons/IconGit.astro";
+import IconLinkedIn from "../icons/IconLinkedIn.astro";
+import IconNode from "../icons/IconNode.astro";
+import IconReact from "../icons/IconReact.astro";
+import IconJavasCript from "../icons/IconJavasCript.astro";
+import IconHtml from "../icons/IconHtml.astro";
+import IconTailwind from "../icons/IconTailwind.astro";
+import IconCss from "../icons/IconCss.astro";
+import Skill from "../components/Skill.astro";
+import IconMySql from "../icons/IconMySql.astro";
+import IconPhp from "../icons/IconPhp.astro";
+import IconNextJs from "../icons/IconNextJs.astro";
+import IconPython from "../icons/IconPython.astro";
+import IconNpm from "../icons/IconNpm.astro";
+import IconAstro from "../icons/IconAstro.astro";
+import IconGitHub from "../icons/IconGitHub.astro";
+import IconDocker from "../icons/IconDocker.astro";
+import IconMail from "../icons/IconMail.astro";
+import Experiences from "../components/Experiences.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full lg:w-[740] mx-auto py-10 flex flex-col">
-			<h1 class="text-yellow-400 font-bold text-start">Hey! I'm FacuDev</h1>
-			<div class="flex">
-				<div class="w-2/3">
-					<h2 class="font-semibold">
-						Fullstack Developer 
-					</h2>
-						<a target="_blank" href="https://www.linkedin.com/in/facundo-botta/" >
-							<Badge>Open to work</Badge>
-						</a>
-					<p class="my-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et numquam assumenda hic, ipsam, libero fugiat autem iusto sunt vero nobis dolor facilis laboriosam illum eos aliquam unde nulla eum esse.</p>
-					<h3 class="font-semibold">Skills</h3>
-				</div>
-				<img class="w-[250px] h-[250px] rounded-full" src="https://media.dev.to/cdn-cgi/image/width=320,height=320,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1400076%2Fdd58fd53-6cee-4b99-bbb2-10dfb70317e4.jpeg" alt="facudev photo" />
-				<!-- <div class="">
-				</div> -->
-			</div>
-
-		</section>
-	</main>
+<Layout
+  title="Portfolio FacuDev - Développeur Web FullStack "
+  description="Étudiant et freelance développeur web fullstack - Facundo Botta - Montpellier"
+>
+  <main>
+    <section
+      class="w-full lg:w-[740] mx-auto py-10 flex flex-col items-center lg:items-start"
+    >
+      <h1
+        class="font-neon text-7xl ml-[-5px] text-yellow text-center lg:text-start"
+      >
+        Hey! I'm Facundo
+      </h1>
+      <div
+        class="flex flex-col-reverse items-center justify-center lg:flex-row lg:justify-start lg:items-start"
+      >
+        <div
+          class="w-2/3 flex flex-col items-center text-center lg:text-start lg:items-start"
+        >
+          <h2 class="">Fullstack Developer</h2>
+          <div class="flex gap-2">
+            <Badge>Open to work</Badge>
+            <a
+              class="group"
+              target="_blank"
+              href="https://github.com/FacuBotta"
+            >
+              <IconGitHub
+                class="w-5 h-5 stroke-2 border group-hover:border-[#f0a4f0] rounded-md peer"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/facundo-botta/"
+            >
+              <IconLinkedIn class="w-5 h-5" />
+            </a>
+            <a target="_top" href="mailto:facundo.botta.dev@gmail.com">
+              <IconMail class="h-7 mt-[-0.2rem]" />
+            </a>
+          </div>
+          <p class="my-8">
+            I'm a student in web development. Currently, I'm studying at ADRAR
+            training center in Montpellier. <span class="text-magenta-light"
+              >I've done small freelance jobs and I'm continuously learning!</span
+            >
+          </p>
+        </div>
+        <img
+          class="size-[300px] rounded-full m-4 lg:mt-[-30px]"
+          src="https://media.dev.to/cdn-cgi/image/width=320,height=320,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1400076%2Fdd58fd53-6cee-4b99-bbb2-10dfb70317e4.jpeg"
+          alt="facudev photo"
+        />
+      </div>
+      <div class="text-center lg:text-left">
+        <h3 class="font-semibold mb-6">My skills 💪</h3>
+        <!-- skills icons -->
+        <div class="flex flex-wrap gap-3 lg:pl-8">
+          <Skill skill="JavasCript">
+            <IconJavasCript class="w-16" />
+          </Skill>
+          <Skill skill="HTML">
+            <IconHtml class="w-16" />
+          </Skill>
+          <Skill skill="CSS ">
+            <IconCss class="w-16" />
+          </Skill>
+          <Skill skill="React">
+            <IconReact class="w-16" />
+          </Skill>
+          <Skill skill="NodeJs">
+            <IconNode class="w-16" />
+          </Skill>
+          <Skill skill="MySql">
+            <IconMySql class="w-16" />
+          </Skill>
+          <Skill skill="Git">
+            <IconGit class="w-16" />
+          </Skill>
+          <Skill skill="NPM">
+            <IconNpm class="w-16" />
+          </Skill>
+        </div>
+        <h3 class="font-semibold my-6">Learning 🔭</h3>
+        <!-- skills icons -->
+        <div
+          class="flex flex-wrap gap-3 justify-center lg:pl-8 lg:justify-start"
+        >
+          <Skill skill="Docker">
+            <IconDocker class="w-16" />
+          </Skill>
+          <Skill skill="NextJs">
+            <IconNextJs class="w-16" />
+          </Skill>
+          <Skill skill="Tailwind">
+            <IconTailwind class="w-16" />
+          </Skill>
+          <Skill skill="Astro">
+            <IconAstro class="w-16" />
+          </Skill>
+          <Skill skill="PHP">
+            <IconPhp class="w-16" />
+          </Skill>
+          <Skill skill="Python">
+            <IconPython class="w-16" />
+          </Skill>
+        </div>
+      </div>
+    </section>
+    <!-- experiences section -->
+    <section class="w-full pl-28 lg:pl-0 lg:w-[740]">
+      <h3 class="font-semibold my-6">Experiences 💼</h3>
+      <div class="lg:pl-8 w-[600px] lg:w-full">
+        <Experiences />
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 1024px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
 </style>

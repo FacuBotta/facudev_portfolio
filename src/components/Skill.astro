@@ -1,0 +1,8 @@
+---
+const { skill } = Astro.props;
+---
+
+<div class="group flex flex-col items-center">
+  <slot />
+  <p class="text-xs group-hover:text-cyan">{skill}</p>
+</div>
